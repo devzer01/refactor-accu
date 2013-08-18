@@ -16,7 +16,7 @@ if($_POST['page']) {
 	$last_btn = true;
 	$start = $page * $per_page;
 	
-	$query_pag_data = "SELECT * from event LIMIT $start, $per_page";
+	$query_pag_data = "SELECT * from event WHERE event_home = 1 LIMIT $start, $per_page";
 	$result_pag_data = mysql_query($query_pag_data) or die('MySql Error' . mysql_error());
 	$msg = "";
 	
