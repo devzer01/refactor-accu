@@ -16,7 +16,7 @@ if($_POST['page']) {
 	$last_btn = true;
 	$start = $page * $per_page;
 	
-	$query_pag_data = "SELECT * from news news_home = 1 ORDER BY news_date DESC LIMIT $start, $per_page";
+	$query_pag_data = "SELECT * from news WHERE news_home = 1 ORDER BY news_date DESC LIMIT $start, $per_page";
 	$result_pag_data = mysql_query($query_pag_data) or die('MySql Error' . mysql_error());
 	$msg = "";
 	
